@@ -66,10 +66,11 @@ form.addEventListener("submit", (evt) => {
   }
 });
 
-/* // Create a new element
-const congrats = document.createElement("p");
-congrats.textContent = "Congratulation you are registered!";
-document.body.appendChild(congrats);
-congrats.style.display = "flex";
-congrats.style.flexDirection = "column";
-congrats.style.alignItems = "center"; */
+// Create a new element
+const footer = document.createElement("footer");
+footer.textContent = "Copyright - Christopher Collado";
+document.body.appendChild(footer);
+footer.style.display = "flex";
+footer.style.flexDirection = "column";
+footer.style.alignItems = "center";
+footer.style.marginTop = "25%";
