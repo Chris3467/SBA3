@@ -55,7 +55,7 @@ form.addEventListener("submit", (evt) => {
 });
 
 form.addEventListener("submit", (evt) => {
-  evt.preventDefault();
+  //evt.preventDefault();
   if (
     nameL.value &&
     email.value &&
