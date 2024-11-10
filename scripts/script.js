@@ -1,3 +1,18 @@
+var navBar = [{ text: "Home" }, { text: "About" }, { text: "Sign/In" }];
+
+const nav = document.querySelector("#navbar");
+nav.style.height = "100%";
+nav.style.backgroundColor = "aliceblue";
+nav.classList.add("flex-around");
+
+navBar.forEach((item) => {
+  const link = document.createElement("a"); // create anchor element
+  link.textContent = item.text; // set the link text
+  link.href = "#"; // placeholder href attribute
+  link.classList.add("navbar-item"); // add a class for styling
+  nav.appendChild(link); // append the link to the navbar
+});
+
 // Caching element using query selector
 const form = document.querySelector("form");
 const nameL = form.elements["name"];
@@ -39,10 +54,22 @@ form.addEventListener("submit", (evt) => {
   }
 });
 
-// Create a new element
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  if (
+    nameL.value &&
+    email.value &&
+    password.value &&
+    password.value.length > 6
+  ) {
+    alert("Congratulations! You are registered!");
+  }
+});
+
+/* // Create a new element
 const congrats = document.createElement("p");
 congrats.textContent = "Congratulation you are registered!";
 document.body.appendChild(congrats);
 congrats.style.display = "flex";
 congrats.style.flexDirection = "column";
-congrats.style.alignItems = "center";
+congrats.style.alignItems = "center"; */
